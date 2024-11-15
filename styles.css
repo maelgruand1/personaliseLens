@@ -1,0 +1,105 @@
+:root {
+  --colorH1: red;
+  --border: 2px solid black;
+  --radius: 30px;
+  --padd: 20px;
+  --align: center;
+  --underline: underline;
+  --bold: bolder;
+}
+
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  background: linear-gradient(to right, yellow, orange);
+  color: #333;
+}
+
+header {
+  background-color: burlywood;
+  color: white;
+  text-align: var(--align);
+  padding: var(--padd);
+  border: var(--border);
+  border-radius: var(--radius);
+}
+
+.title {
+  font-size: 2em;
+  margin: 0;
+  text-align: var(--align);
+}
+
+.title:hover {
+  text-decoration: var(--underline);
+  font-size: 35px;
+  transition: all 1s ease;
+}
+
+aside.description {
+  color: black;
+  background-color: cadetblue;
+  border: var(--border);
+  border-radius: var(--radius);
+  padding: var(--padd);
+}
+
+#gafas {
+  position: relative;
+  display: inline-block;
+}
+
+#lunettes {
+  width: 300px; /* Ajuste la taille de l'image des lunettes */
+  height: auto;
+  position: relative; /* S'assurer que l'image reste en dessous des overlays */
+}
+
+.overlay {
+  position: absolute;
+  background-color: transparent;
+  opacity: 0.5; /* Ajuste la transparence si nécessaire */
+  pointer-events: none;
+  z-index: 1; /* Placer au-dessus de l'image des lunettes */
+}
+
+#overlay-left {
+  width: 60px;
+  height: 60px;
+  top: 40px; /* Ajuste la position du verre gauche */
+  left: 60px; /* Ajuste la position du verre gauche */
+}
+
+#overlay-right {
+  width: 60px;
+  height: 60px;
+  top: 40px; /* Ajuste la position du verre droit */
+  left: 130px; /* Ajuste la position du verre droit */
+}
+
+.options button {
+  margin: 5px;
+  padding: 10px 20px;
+  background-color: #007bff;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.options button:hover {
+  background-color: #0056b3;
+}
+#btn {
+  padding: var(--padd);
+  text-align: center;
+  background-color: greenyellow;
+  border: var(--border);
+  border-radius: var(--radius);
+  align-self: center;
+}
+#btn:hover {
+  background-color: orangered;
+  transform: scale(1.1);
+}

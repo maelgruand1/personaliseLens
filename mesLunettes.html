@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Personalisateur de lunettes</title>
+    <link rel="stylesheet" href="styles.css" />
+    <script src="personalize.js" defer></script>
+    <script src="script.js"></script>
+  </head>
+  <body>
+    <header>
+      <h1 class="title">Personalisateur de lunettes de soleil</h1>
+    </header>
+    <br /><br /><br />
+    <button id="btn" onclick="returnAccueil()">Retourner à l'acceuil</button>
+
+    <br /><br /><br />
+
+    <!-- Conteneur pour les lunettes avec différentes formes -->
+    <div id="gafas" class="square">
+      <!-- Forme carrée par défaut -->
+      <div id="overlay-left" class="overlay"></div>
+      <div id="overlay-right" class="overlay"></div>
+      <img
+        id="lunettes"
+        src="default_lens.png"
+        alt="Lunettes personnalisables"
+      />
+      <div class="options">
+        <button id="change-color-red">Rouge</button>
+        <button id="change-color-blue">Bleu</button>
+        <button id="change-color-green">Vert</button>
+        <button id="change-shape-square">Carrée</button>
+        <button id="change-shape-round">Ronde</button>
+        <button id="change-shape-aviator">Aviateur</button>
+      </div>
+    </div>
+  </body>
+</html>
