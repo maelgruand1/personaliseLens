@@ -1,23 +1,22 @@
 <!DOCTYPE html>
-<html lang="fr">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Ma Galerie Photo</title>
-    <link rel="stylesheet" href="style.css" />
-    <link rel="stylesheet" href="styles.css" />
-  </head>
-  <body>
-    <div class="gallery">
-      <img src="image1.jpeg" alt="Image 1" />
-      <img src="image2.jpeg" alt="Image 2" />
-      <img src="image3.jpeg" alt="Image 3" />
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Photo Carousel</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <div class="carousel">
+    <div class="carousel-images">
+      <img src="image1.jpg" alt="Image 1">
+      <img src="image2.jpg" alt="Image 2">
+      <img src="image3.jpg" alt="Image 3">
     </div>
-    <div class="modal" id="myModal">
-      <span class="close">&times;</span>
-      <img class="modal-content" id="img01" />
-      <div id="caption"></div>
-    </div>
-    <script src="script.js"></script>
-  </body>
+    <button class="prev">❮</button>
+    <button class="next">❯</button>
+  </div>
+
+  <script src="script.js"></script>
+</body>
 </html>

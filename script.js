@@ -15,28 +15,28 @@ function returnAccueil() {
   redirectTo = true;
   window.location.href = "index.html";
 }
-// Fonction pour ouvrir la modal
-function openModal(img) {
-  // Obtenez l'image et la légende
-  var modalImg = document.getElementById("img01");
-  var captionText = document.getElementById("caption");
-  modalImg.src = img.src;
-  captionText.innerHTML = img.alt;
-  // Affiche la modal
-  document.getElementById("myModal").style.display = "block";
+
+const carouselImages = document.querySelector('.carousel-images');
+const images = document.querySelectorAll('.carousel-images img');
+const prevButton = document.querySelector('.prev');
+const nextButton = document.querySelector('.next');
+
+let currentIndex = 0;
+
+function updateCarousel() {
+  const imageWidth = images[0].clientWidth;
+  carouselImages.style.transform = `translateX(${-currentIndex * imageWidth}px)`;
 }
 
-// Fonction pour fermer la modal
-var span = document.getElementsByClassName("close")[0];
-span.onclick = function() {
-  document.getElementById("myModal").style.display = "none";
-}
-
-// Ajoute un événement click à chaque image pour ouvrir la modal
-const images = document.querySelectorAll('.gallery img');
-
-images.forEach(image => {
-  image.addEventListener('click', () => {
-    openModal(image);
-  });
+prevButton.addEventListener('click', () => {
+  currentIndex = (currentIndex > 0) ? currentIndex - 1 : images.length - 1;
+  updateCarousel();
 });
+
+nextButton.addEventListener('click', () => {
+  currentIndex = (currentIndex < images.length - 1) ? currentIndex + 1 : 0;
+  updateCarousel();
+});
+
+// Make sure the carousel adjusts on window resize
+window.addEventListener('resize', updateCarousel);
