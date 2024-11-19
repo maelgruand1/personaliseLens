@@ -91,7 +91,7 @@ aside.description {
 .options button:hover {
   background-color: #0056b3;
 }
-#btn {
+button.btn {
   padding: var(--padd);
   text-align: center;
   background-color: greenyellow;
@@ -99,7 +99,7 @@ aside.description {
   border-radius: var(--radius);
   align-self: center;
 }
-#btn:hover {
+.btn:hover {
   background-color: orangered;
   transform: scale(1.1);
 }
