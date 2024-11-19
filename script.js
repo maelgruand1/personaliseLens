@@ -7,9 +7,9 @@ function redirectLunettes() {
   redirectTo = true;
   window.location.href = "mesLunettes.html";
 }
-function redirectPage1(){
+function redirectPage1() {
   redirectTo = true;
-  window.location.href = "ModeleLunettes.html";
+  window.location.href = "modeleLunettes.html";
 }
 function returnAccueil() {
   redirectTo = true;
