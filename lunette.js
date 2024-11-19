@@ -6,48 +6,47 @@ const indicatorsContainer = document.querySelector(".indicators");
 
 let currentIndex = 0;
 
-// Create indicators
+// Créez des indicateurs dynamiques
 images.forEach((_, index) => {
   const indicator = document.createElement("div");
-  indicator.dataset.index = index;
-  if (index === currentIndex) indicator.classList.add("active");
+  indicator.dataset.index = index; // Associe un index à chaque indicateur
+  if (index === currentIndex) indicator.classList.add("active"); // Active le premier indicateur
   indicatorsContainer.appendChild(indicator);
 });
 
 const indicators = document.querySelectorAll(".indicators div");
 
-// Update carousel position
+// Fonction pour mettre à jour la position du carousel
 function updateCarousel() {
-  const imageWidth = images[0].clientWidth;
+  const imageWidth = images[0].clientWidth; // Largeur d'une image
   carouselImages.style.transform = `translateX(${
     -currentIndex * imageWidth
-  }px)`;
+  }px)`; // Déplace le carousel
 
-  // Update indicators
+  // Met à jour les indicateurs
   indicators.forEach((indicator) => indicator.classList.remove("active"));
   indicators[currentIndex].classList.add("active");
 }
 
-// Previous button logic
-// Logic for Previous button
+// Bouton Précédent
 prevButton.addEventListener("click", () => {
-  currentIndex = (currentIndex - 1 + images.length) % images.length;
+  currentIndex = (currentIndex - 1 + images.length) % images.length; // Va à l'image précédente ou boucle
   updateCarousel();
 });
 
-// Logic for Next button
+// Bouton Suivant
 nextButton.addEventListener("click", () => {
-  currentIndex = (currentIndex + 1) % images.length;
+  currentIndex = (currentIndex + 1) % images.length; // Va à l'image suivante ou boucle
   updateCarousel();
 });
 
-// Indicator click logic
+// Cliquez sur les indicateurs
 indicators.forEach((indicator) => {
   indicator.addEventListener("click", (e) => {
-    currentIndex = parseInt(e.target.dataset.index);
+    currentIndex = parseInt(e.target.dataset.index); // Passe à l'image correspondante
     updateCarousel();
   });
 });
 
-// Make the carousel responsive
+// Rend le carousel responsive
 window.addEventListener("resize", updateCarousel);
