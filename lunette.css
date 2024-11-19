@@ -43,21 +43,24 @@ body {
     display: flex;
     justify-content: space-between;
     transform: translateY(-50%);
+    z-index: 10; /* Assurez-vous que les boutons sont devant les images */
   }
   
   .controls button {
-    background: rgba(255, 255, 255, 0.1);
-    border: 1px solid rgba(255, 255, 255, 0.4);
-    color: white;
+    background: rgba(255, 255, 255, 0.6); /* Boutons semi-transparents */
+    border: none;
+    color: black; /* Couleur contrastée */
     font-size: 24px;
-    padding: 10px;
+    padding: 10px 20px;
     border-radius: 50%;
     cursor: pointer;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.5); /* Ajout d'un ombrage pour plus de visibilité */
     transition: all 0.3s ease;
   }
   
   .controls button:hover {
-    background: rgba(255, 255, 255, 0.3);
+    background: white;
+    color: black;
     transform: scale(1.2);
   }
   
@@ -84,4 +87,3 @@ body {
     background: white;
     transform: scale(1.2);
   }
-  
