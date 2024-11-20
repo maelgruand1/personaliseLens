@@ -16,3 +16,11 @@ table.tabLunette{
     padding: 100px;
     align-items: center;
 }
+tr.description{
+    border: solid 2px red;
+    border-radius: 20px;
+}
+td{
+    border: solid 1px blue;
+}
+
