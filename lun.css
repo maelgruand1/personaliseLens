@@ -14,5 +14,5 @@ table.tabLunette{
     border: solid 1px;
     border-radius: 50px;
     padding: 100px;
-    text-align: center;
+    align-items: center;
 }
