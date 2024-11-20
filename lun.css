@@ -86,3 +86,17 @@ table.tabLunette td {
         padding: 10px;
     }
 }
+button.btn{
+    color: white;
+    background-color: #2575fc;
+    border: solid 0px;
+    border-radius: 50px;
+    padding: 20px;
+    transition: all 0.7s;
+}
+.btn:hover{
+    color:black;
+    background-color: greenyellow;
+    text-decoration: underline;
+    font-weight: bolder;
+}
