@@ -17,7 +17,7 @@ h1.title {
 
 /* Style général pour le tableau */
 table.tabLunette {
-    width: 100%; /* Prend toute la largeur du conteneur */
+    width: 50%; /* Prend  50% de la largeur du conteneur */
     font-size: 16px;
     border-collapse: collapse;
     border-radius: 15px; /* Bordures arrondies */
@@ -29,7 +29,7 @@ table.tabLunette {
 /* Cellules du tableau */
 table.tabLunette td, 
 table.tabLunette th {
-    border: 1px solid #1e90ff; /* Bleu moderne pour les bordures */
+    border: 3px solid #1e90ff; /* Bleu moderne pour les bordures */
     padding: 15px;
     text-align: center;
     font-family: 'Arial', sans-serif;
@@ -58,7 +58,7 @@ table.tabLunette tr:nth-child(odd) {
 
 /* Rangées au survol */
 table.tabLunette tr:hover {
-    background: #e3f2fd; /* Highlight léger au survol */
+    background: greenyellow; /* Highlight léger au survol */
     transition: background 0.3s ease-in-out;
 }
 
