@@ -9,3 +9,12 @@ h1.title{
     color: black;
     text-decoration: underline;
 }
+table.tabLunette{
+    font-size: large;
+    border: solid 1px;
+    border-radius: 50px;
+}
+th{
+    text-align: center;
+
+}
