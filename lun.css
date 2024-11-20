@@ -1,26 +1,88 @@
-/* Titulo */
-header{
+/* Style pour le header */
+header {
     padding: 20px;
-    border: solid 0px;
-    background-color: bisque;
-}
-h1.title{
+    border: none; /* Retiré les bordures inutiles */
+    background: linear-gradient(90deg, #ffcc99, #ffe6cc); /* Dégradé doux pour un look moderne */
     text-align: center;
-    color: black;
-    text-decoration: underline;
-}
-table.tabLunette{
-    font-size: large;
-    border: solid 1px;
-    border-radius: 50px;
-    padding: 100px;
-    align-items: center;
-}
-tr.description{
-    border: solid 2px red;
-    border-radius: 20px;
-}
-td{
-    border: solid 1px blue;
+    border-radius: 10px; /* Arrondi pour un style élégant */
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2); /* Ombre légère */
 }
 
+h1.title {
+    text-align: center;
+    color: #333; /* Couleur plus sobre pour le titre */
+    text-decoration: underline;
+    font-family: 'Arial', sans-serif;
+}
+
+/* Style général pour le tableau */
+table.tabLunette {
+    width: 100%; /* Prend toute la largeur du conteneur */
+    font-size: 16px;
+    border-collapse: collapse;
+    border-radius: 15px; /* Bordures arrondies */
+    margin: 20px auto;
+    overflow: hidden;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2); /* Ombre pour un effet flottant */
+}
+
+/* Cellules du tableau */
+table.tabLunette td, 
+table.tabLunette th {
+    border: 1px solid #1e90ff; /* Bleu moderne pour les bordures */
+    padding: 15px;
+    text-align: center;
+    font-family: 'Arial', sans-serif;
+    background-color: #f9f9f9; /* Fond clair pour un contraste agréable */
+    color: #333;
+}
+
+/* Style des en-têtes */
+table.tabLunette th {
+    background: linear-gradient(90deg, #6a11cb, #2575fc); /* Dégradé futuriste pour les en-têtes */
+    color: white;
+    text-transform: uppercase;
+    font-size: 18px;
+    font-weight: bold;
+    border: none; /* Supprime les bordures pour un effet lisse */
+}
+
+/* Style des rangées */
+table.tabLunette tr:nth-child(even) {
+    background-color: #f1f1f1; /* Couleur alternée pour les lignes */
+}
+
+table.tabLunette tr:nth-child(odd) {
+    background-color: #ffffff; /* Couleur de base pour les autres lignes */
+}
+
+/* Rangées au survol */
+table.tabLunette tr:hover {
+    background: #e3f2fd; /* Highlight léger au survol */
+    transition: background 0.3s ease-in-out;
+}
+
+/* Ligne spécifique avec une description */
+tr.description {
+    border: 2px solid red;
+    background-color: #ffcccc; /* Couleur de fond spécifique pour cette ligne */
+    border-radius: 20px;
+}
+
+/* Cellules spécifiques */
+table.tabLunette td {
+    border-radius: 10px;
+    color: #555;
+}
+
+/* Style responsive */
+@media screen and (max-width: 768px) {
+    table.tabLunette {
+        font-size: 14px; /* Réduit la taille des polices sur les petits écrans */
+    }
+
+    table.tabLunette td,
+    table.tabLunette th {
+        padding: 10px;
+    }
+}
